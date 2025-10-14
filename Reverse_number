@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int reverse(int x) {
+        long long revno = 0;
+        while(x!=0){
+            int rem = x%10;
+            x /= 10;
+            revno = (revno*10) + rem;
+        }
+        if(revno>INT_MAX || revno<INT_MIN){
+            return 0;
+        }
+        else{
+            return (int)revno;
+        }
+    }
+};
